@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/FatalBanana1/ecommerce-app-wr/static/css/main.073c9b0a.css",
+    "main.js": "/FatalBanana1/ecommerce-app-wr/static/js/main.bd25eb11.js",
+    "static/js/787.5ad59746.chunk.js": "/FatalBanana1/ecommerce-app-wr/static/js/787.5ad59746.chunk.js",
+    "static/media/logo.svg": "/FatalBanana1/ecommerce-app-wr/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/FatalBanana1/ecommerce-app-wr/index.html",
+    "main.073c9b0a.css.map": "/FatalBanana1/ecommerce-app-wr/static/css/main.073c9b0a.css.map",
+    "main.bd25eb11.js.map": "/FatalBanana1/ecommerce-app-wr/static/js/main.bd25eb11.js.map",
+    "787.5ad59746.chunk.js.map": "/FatalBanana1/ecommerce-app-wr/static/js/787.5ad59746.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.bd25eb11.js"
+  ]
+}
