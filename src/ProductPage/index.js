@@ -1,8 +1,9 @@
 //import
+import { useState } from "react";
 import Product from "../Product";
 import Sizes from "../Sizes";
 import "./ProductPage.css";
-import { useState } from "react";
+
 
 //main
 export default function ProductPage() {

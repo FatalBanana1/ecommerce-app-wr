@@ -7,7 +7,7 @@ export default function Footer() {
 	return (
 		<div className="footer-container">
 			<div className="footer-left">
-				<div>Shop By</div>
+				<h5>Shop By</h5>
 				<div>Tops</div>
 				<div>Bottoms</div>
 				<div>Outerwear</div>
@@ -17,7 +17,7 @@ export default function Footer() {
 			</div>
 
 			<div className="footer-mid">
-				<div>Follow Us</div>
+				<h5>Follow Us</h5>
 				<div>Instagram</div>
 				<div>Facebook</div>
 				<div>Twitter</div>
@@ -27,7 +27,7 @@ export default function Footer() {
 			</div>
 
 			<div className="footer-right">
-				<div>Contact Us</div>
+				<h5>Contact Us</h5>
 				<div>rewind@finesse.us</div>
 				<div>Exchanges, Refunds, & Returns</div>
 				<div>Shipping & Returns</div>

@@ -28,3 +28,55 @@
 .navbar-right {
 	display: flex;
 }
+
+.nav-menu-icon-search {
+	width: 15px;
+	height: 15px;
+	object-fit: cover;
+	align-self: center;
+	margin-left: 10px;
+}
+
+.nav-menu-icon {
+	width: 25px;
+	height: 25px;
+	object-fit: cover;
+}
+
+.cart-number {
+	margin-left: 5px;
+}
+
+.cart {
+	width: 28px;
+	height: auto;
+	object-fit: cover;
+	align-self: center;
+	margin-left: 10px;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.cart-number {
+	position: absolute;
+	right: 35px;
+	top: 8px;
+	z-index: 10;
+	font-weight: 600;
+}
+
+.cart-number-2 {
+	position: absolute;
+	right: 33px;
+	top: 8px;
+	z-index: 10;
+	font-weight: 600;
+}
+
+.cart-number-3 {
+	position: absolute;
+	right: 26px;
+	top: 8px;
+	z-index: 10;
+	font-weight: 600;
+}
