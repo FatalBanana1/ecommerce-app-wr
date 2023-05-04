@@ -2,13 +2,10 @@
 import "./Product.css";
 
 //main
-export default function Product({ product }) {
+export default function Product({ image }) {
 	return (
 		<div className="product">
-			<img src={product.image} alt={product.name} />
-			<h2>{product.name}</h2>
-			<p>Price: ${product.price}</p>
-			<button>Add to Cart</button>
+			<img className="product-image" src={image.image} alt={image.name} />
 		</div>
 	);
 }

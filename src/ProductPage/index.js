@@ -4,28 +4,46 @@ import "./ProductPage.css";
 
 //main
 export default function ProductPage() {
-	const products = [
+	// product info
+	let product = {
+		id: 1,
+		name: "Sandy Tie Dye Print Dress",
+		price: 36,
+		image: "https://cdn.shopify.com/s/files/1/0237/3346/9261/products/file_fbe029d5-ce6f-4a4b-ad03-12de748de70c_1100x.jpg?v=1674955469",
+	};
+
+	// product images
+	const images = [
 		{
 			id: 1,
-			name: "Product 1",
-			price: 10.99,
-			image: "product1.jpg",
+			productId: 1,
+			image: "https://cdn.shopify.com/s/files/1/0237/3346/9261/products/file_fbe029d5-ce6f-4a4b-ad03-12de748de70c_1100x.jpg?v=1674955469",
 		},
 		{
 			id: 2,
-			name: "Product 2",
-			price: 19.99,
-			image: "product2.jpg",
+			productId: 1,
+			image: "https://cdn.shopify.com/s/files/1/0237/3346/9261/products/file_d92bb309-b1c6-44fc-b0f6-b7a33a90d693_1100x.jpg?v=1674955469",
 		},
-		// Add more products as needed
 	];
 
+	//format price to currency
+	const formattedPrice = product.price.toLocaleString("en-US", {
+		style: "currency",
+		currency: "USD",
+	});
+
+	// return
 	return (
 		<div>
 			<h1>Product Page</h1>
-			{products.map((product) => (
-				<Product key={product.id} product={product} />
+			{images.map((image) => (
+				<Product key={image.id} image={image} />
 			))}
+
+			<h2>{product.name}</h2>
+			<p>Price: {formattedPrice}</p>
+			<button>Add to Cart</button>
+			<button>Buy with G Pay</button>
 		</div>
 	);
 }

@@ -1,10 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import ProductPage from "./ProductPage";
+import Navbar from "./NavBar";
 
 function App() {
 	return (
 		<div className="App">
+			<Navbar />
 			<ProductPage />
 		</div>
 	);
