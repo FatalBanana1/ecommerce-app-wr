@@ -1,0 +1,20 @@
+.size-header {
+	text-align: left;
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+
+.size-button {
+	width: 20%;
+	line-height: 35px;
+	border: 1px solid rgba(128, 128, 128, 0.7);
+	background-color: white;
+	box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.2);
+}
+
+.selected-size {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 35px;
+}

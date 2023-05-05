@@ -1,10 +1,10 @@
 //imports
-
 import { useState } from "react";
+import "./Sizes.css";
 
 //main
 export default function Sizes() {
-	//states
+	// states
 	// select size
 	const [selectedSize, setSelectedSize] = useState("");
 
@@ -19,9 +19,10 @@ export default function Sizes() {
 	//return
 	return (
 		<div className="size-selector">
-			<div>Size</div>
+			<div className="size-header">Size</div>
+
 			<div className="size-grid">
-				<div className="size-row-two">
+				<div className="size-row-one">
 					<button
 						className={`size-button ${
 							selectedSize === "XS" ? "selected" : ""
@@ -91,7 +92,14 @@ export default function Sizes() {
 					</button>
 				</div>
 			</div>
-			{selectedSize && <p>Selected Size: {selectedSize}</p>}
+
+			{selectedSize ? (
+				<div className="selected-size">
+					Selected Size: {selectedSize}
+				</div>
+			) : (
+				<div className="selected-size">Select Size Above</div>
+			)}
 		</div>
 	);
 }

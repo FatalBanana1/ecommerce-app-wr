@@ -3,7 +3,7 @@ import "./NavBar.css";
 import Logo from "./Logo";
 import menu from "../Assets/menu.png";
 import search from "../Assets/search.png";
-import cart from "../Assets/cart.png";
+import cart from "../Assets/cart-2.png";
 
 //main
 export default function Navbar() {
