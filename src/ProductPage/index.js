@@ -4,6 +4,7 @@ import Images from "../Images";
 import Sizes from "../Sizes";
 import "./ProductPage.css";
 import product from "../Data/data.js";
+import Reviews from "../Reviews";
 
 //main
 export default function ProductPage() {
@@ -12,6 +13,12 @@ export default function ProductPage() {
 		style: "currency",
 		currency: "USD",
 	});
+
+	// -----------------------
+	// states
+
+	const [hideShipping, setHideShipping] = useState(true);
+	const [hideDetails, setHideDetails] = useState(true);
 
 	// -----------------------
 
@@ -28,24 +35,105 @@ export default function ProductPage() {
 			<Sizes />
 
 			<button className="cart-button">ADD TO CART</button>
-			<button className="paypal-button">BUY WITH PAYPAL</button>
+			<button className="paypal-button">
+				BUY WITH <span className="blue">PAYPAL</span>
+			</button>
 
-			<div className="product-deets-header">Product</div>
+			<div className="details-container">
+				<div
+					className="product-deets-header"
+					onClick={() => setHideDetails(!hideDetails)}
+				>
+					Product Details
+				</div>
 
-			<div className="product-deets">{product.productDetails}</div>
+				{hideDetails ? (
+					<div
+						className="shipping-plus"
+						onClick={() => setHideDetails(false)}
+					>
+						+
+					</div>
+				) : (
+					<div
+						className="shipping-minus"
+						onClick={() => setHideDetails(true)}
+					>
+						-
+					</div>
+				)}
+			</div>
 
-			<div>Model</div>
+			{!hideDetails && (
+				<>
+					<div className="product-deets">
+						{product.productDetails}
+					</div>
 
-			<div>{product.modelInfo}</div>
+					<div className="model-header">Model</div>
+					<div className="model-info">{product.modelInfo}</div>
 
-			<div>Material</div>
-			<div>{product.materialInfo}</div>
+					<div className="material-header">Material</div>
 
-			<div>Shipping & Returns</div>
+					{product.materialInfo.map((material, j) => (
+						<div className="material-info" key={j}>
+							{`${material}`}
+						</div>
+					))}
+				</>
+			)}
 
-			<div>Size Guide</div>
+			<div className="shipping-container">
+				<div
+					className="shipping-header"
+					onClick={() => setHideShipping(!hideShipping)}
+				>
+					Shipping & Returns
+				</div>
 
-			<div>Finesse features</div>
+				{hideShipping ? (
+					<div
+						className="shipping-plus"
+						onClick={() => setHideShipping(false)}
+					>
+						+
+					</div>
+				) : (
+					<div
+						className="shipping-minus"
+						onClick={() => setHideShipping(true)}
+					>
+						-
+					</div>
+				)}
+			</div>
+
+			{!hideShipping && (
+				<ul className={`shipping-list ${hideShipping ? "hidden" : ""}`}>
+					<li>
+						This item qualifies for Free Shipping with minimum
+						purchase!
+					</li>
+					<li>
+						Returns are accepted within 30 days from purchase date.
+					</li>
+					<li>Last Act items are final sale and sold “as is.”</li>
+					<li>
+						No returns, exchanges, or price adjustments allowed.
+					</li>
+					<li>
+						For complete details, read our Shipping and Return
+						policies.
+					</li>
+					<li>Please call customer service for returns.</li>
+				</ul>
+			)}
+
+			<Reviews />
+
+			<div>YOU MAY ALSO LIKE...</div>
+			<div></div>
+			<div></div>
 
 			<div>{"You may like... >"}</div>
 

@@ -22,7 +22,7 @@ const product = {
 
 	modelInfo: `Casey is 5'11" and is wearing a size S`,
 
-	materialInfo: `95% Polyester, 5% Spandex`,
+	materialInfo: [`95% Polyester`, `5% Spandex`],
 };
 
 export default product;

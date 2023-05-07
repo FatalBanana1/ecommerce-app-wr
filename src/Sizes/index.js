@@ -15,13 +15,20 @@ export default function Sizes() {
 	};
 
 	// ---------------------
+	// modal for sizing chart
+
+	const [modal, setModal] = useState(false);
+
+	// ---------------------
 
 	//return
 	return (
 		<div className="size-selector">
 			<div className="size-header-container">
 				<div className="size-header">Size</div>
-				<div className="size-question">?</div>
+				<div className="size-question" onClick={() => setModal(!modal)}>
+					?
+				</div>
 			</div>
 
 			<div className="size-grid">
