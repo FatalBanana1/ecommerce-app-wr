@@ -7,3 +7,22 @@
 .reviews-container {
 	margin: 20px 15px 5px 15px;
 }
+
+.reviews-header-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.star-icon {
+	height: 15px;
+	width: 15px;
+	object-fit: cover;
+}
+
+.stars-container {
+	display: flex;
+	flex-direction: row;
+	margin: 25px;
+	text-align: left;
+}

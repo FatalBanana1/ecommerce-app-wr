@@ -65,7 +65,12 @@ export default function ProductPage() {
 				)}
 			</div>
 
-			<div className="product-deets">{product.productDetails}</div>
+			<div
+				className="product-deets"
+				onClick={() => setHideDetails(!hideDetails)}
+			>
+				{product.productDetails}
+			</div>
 
 			{!hideDetails && (
 				<>
@@ -111,7 +116,9 @@ export default function ProductPage() {
 				<ul className={`shipping-list ${hideShipping ? "hidden" : ""}`}>
 					{product.shipping.map((info, k) => (
 						<div key={k} className="shipping-info">
-							<div className="shipping-details-header">{info[0]}</div>
+							<div className="shipping-details-header">
+								{info[0]}
+							</div>
 							{info.map((text, l) => (
 								<>
 									{l >= 1 && (
