@@ -109,22 +109,20 @@ export default function ProductPage() {
 
 			{!hideShipping && (
 				<ul className={`shipping-list ${hideShipping ? "hidden" : ""}`}>
-					<li>
-						This item qualifies for Free Shipping with minimum
-						purchase!
-					</li>
-					<li>
-						Returns are accepted within 30 days from purchase date.
-					</li>
-					<li>Last Act items are final sale and sold “as is.”</li>
-					<li>
-						No returns, exchanges, or price adjustments allowed.
-					</li>
-					<li>
-						For complete details, read our Shipping and Return
-						policies.
-					</li>
-					<li>Please call customer service for returns.</li>
+					{product.shipping.map((info, k) => (
+						<div key={k} className="shipping-info">
+							<div className="shipping-details-header">{info[0]}</div>
+							{info.map((text, l) => (
+								<>
+									{l >= 1 && (
+										<li key={l} className="shipping-text">
+											{text}
+										</li>
+									)}
+								</>
+							))}
+						</div>
+					))}
 				</ul>
 			)}
 

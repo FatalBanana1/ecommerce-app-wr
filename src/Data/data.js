@@ -98,6 +98,30 @@ const product = {
 				"Whether you’re a size 6 or 16 this dress will give you a feminine look and feel without highlighting some not so flattering features we “mature” women tend to accumulate. Size 16 and love it.",
 		},
 	],
+
+	shipping: [
+		[
+			"STANDARD SHIPPING",
+			"Free for orders over $75.",
+			"Within the US, the estimated transit period is 6-11 business days, depending on the delivery address.",
+
+			"Within the AU & UK, the estimated transit period is 5-11 business days, depending on the delivery address.",
+			"Within DE, the estimated transit period is 10-15 business days, depending on the delivery address.",
+		],
+
+		[
+			"EXPRESS SHIPPING",
+			"Within the US, the estimated transit period is 2-5 business days, depending on the delivery address.",
+			"Within the UK, the estimated transit period is 2-5 business days, depending on the delivery address.",
+			"Express shipping is not yet available to customers in AU and DE.",
+		],
+
+		[
+			"FREE RETURNS & EXCHANGES",
+			"You can return or exchange your items from domestic orders easily with free shipping by clicking here and following the returns process.",
+			"For free international returns shipping, just shoot us an email at rewind@finesse.us to get it started!",
+		],
+	],
 };
 
 export default product;
