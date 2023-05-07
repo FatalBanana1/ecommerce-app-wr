@@ -12,10 +12,10 @@
 
 .size-question {
 	margin-right: 40px;
-	border: 1.5px solid black;
+	border: 2px solid black;
 	height: 22px;
 	width: 22px;
-	border-radius: 150%;
+	border-radius: 5px;
 	color: black;
 	font-size: 15px;
 }
