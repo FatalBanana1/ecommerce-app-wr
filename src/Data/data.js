@@ -77,9 +77,10 @@ const product = {
 	// fit = max score 10 (1-3 = runs small, 4-7 = normal fit, 8-10 = runs large)
 	reviews: [
 		{
-			quality: 4,
+			quality: 3,
 			fit: 5,
 			username: "lily",
+			createdAt: new Date("2023-01-02"),
 			details:
 				"Lovely dress. Well made but it was not the right dress for the occasion",
 		},
@@ -87,13 +88,15 @@ const product = {
 			quality: 5,
 			fit: 5,
 			username: "fatalbanana",
+			createdAt: new Date("2023-02-22"),
 			details:
 				"Ready for a party or paired with a cute hat, off to church",
 		},
 		{
-			quality: 3,
+			quality: 4,
 			fit: 7,
 			username: "beckywiththegoodhair",
+			createdAt: new Date("2023-03-19"),
 			details:
 				"Whether you’re a size 6 or 16 this dress will give you a feminine look and feel without highlighting some not so flattering features we “mature” women tend to accumulate. Size 16 and love it.",
 		},

@@ -25,7 +25,7 @@ export default function ProductPage() {
 
 	// return
 	return (
-		<div>
+		<>
 			<Images images={product.images} />
 
 			<div className="product-header">
@@ -72,20 +72,22 @@ export default function ProductPage() {
 				{product.productDetails}
 			</div>
 
-			{!hideDetails && (
-				<>
-					<div className="model-header">Model</div>
-					<div className="model-info">{product.modelInfo}</div>
+			<div className={`${!hideDetails ? "expand-product" : "collapse"}`}>
+				{!hideDetails && (
+					<>
+						<div className="model-header">Model</div>
+						<div className="model-info">{product.modelInfo}</div>
 
-					<div className="material-header">Material</div>
+						<div className="material-header">Material</div>
 
-					{product.materialInfo.map((material, j) => (
-						<div className="material-info" key={j}>
-							{`${material}`}
-						</div>
-					))}
-				</>
-			)}
+						{product.materialInfo.map((material, j) => (
+							<div className="material-info" key={j}>
+								{`${material}`}
+							</div>
+						))}
+					</>
+				)}
+			</div>
 
 			<div className="shipping-container">
 				<div
@@ -112,32 +114,41 @@ export default function ProductPage() {
 				)}
 			</div>
 
-			{!hideShipping && (
-				<ul className={`shipping-list ${hideShipping ? "hidden" : ""}`}>
-					{product.shipping.map((info, k) => (
-						<div key={k} className="shipping-info">
-							<div className="shipping-details-header">
-								{info[0]}
+			<div className={`${!hideShipping ? "expand-shipping" : "collapse"}`}>
+				{!hideShipping && (
+					<ul
+						className={`shipping-list ${
+							hideShipping ? "hidden" : ""
+						}`}
+					>
+						{product.shipping.map((info, k) => (
+							<div key={k} className="shipping-info">
+								<div className="shipping-details-header">
+									{info[0]}
+								</div>
+								{info.map((text, l) => (
+									<>
+										{l >= 1 && (
+											<li
+												key={l}
+												className="shipping-text"
+											>
+												{text}
+											</li>
+										)}
+									</>
+								))}
 							</div>
-							{info.map((text, l) => (
-								<>
-									{l >= 1 && (
-										<li key={l} className="shipping-text">
-											{text}
-										</li>
-									)}
-								</>
-							))}
-						</div>
-					))}
-				</ul>
-			)}
+						))}
+					</ul>
+				)}
+			</div>
 
 			<Reviews />
 
 			<YouMayAlsoLike />
 
 			<div className="back-header">Back to Top</div>
-		</div>
+		</>
 	);
 }
