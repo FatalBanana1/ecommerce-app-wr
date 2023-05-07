@@ -19,13 +19,16 @@ export default function Sizes() {
 	//return
 	return (
 		<div className="size-selector">
-			<div className="size-header">Size</div>
+			<div className="size-header-container">
+				<div className="size-header">Size</div>
+				<div className="size-question">?</div>
+			</div>
 
 			<div className="size-grid">
 				<div className="size-row-one">
 					<button
 						className={`size-button ${
-							selectedSize === "XS" ? "selected" : ""
+							selectedSize === "XS" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("XS")}
 					>
@@ -33,7 +36,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "S" ? "selected" : ""
+							selectedSize === "S" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("S")}
 					>
@@ -41,7 +44,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "M" ? "selected" : ""
+							selectedSize === "M" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("M")}
 					>
@@ -49,7 +52,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "L" ? "selected" : ""
+							selectedSize === "L" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("L")}
 					>
@@ -60,7 +63,7 @@ export default function Sizes() {
 				<div className="size-row-two">
 					<button
 						className={`size-button ${
-							selectedSize === "XL" ? "selected" : ""
+							selectedSize === "XL" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("XL")}
 					>
@@ -68,7 +71,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "1X" ? "selected" : ""
+							selectedSize === "1X" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("1X")}
 					>
@@ -76,7 +79,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "2X" ? "selected" : ""
+							selectedSize === "2X" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("2X")}
 					>
@@ -84,7 +87,7 @@ export default function Sizes() {
 					</button>
 					<button
 						className={`size-button ${
-							selectedSize === "3X" ? "selected" : ""
+							selectedSize === "3X" ? "selected-option" : ""
 						}`}
 						onClick={() => handleSizeClick("3X")}
 					>

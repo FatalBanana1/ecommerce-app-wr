@@ -1,7 +1,23 @@
+.size-header-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 15px;
+}
+
 .size-header {
 	text-align: left;
 	margin-left: 40px;
 	margin-bottom: 10px;
+}
+
+.size-question {
+	margin-right: 40px;
+	border: 1px solid black;
+	height: 22px;
+	width: 22px;
+	border-radius: 150%;
+	color: black;
+	font-size: 15px;
 }
 
 .size-button {
@@ -17,4 +33,10 @@
 	margin-bottom: 10px;
 	font-size: 18px;
 	line-height: 35px;
+}
+
+.selected-option {
+	border: 1px solid black;
+	background-color: black;
+	color: white;
 }

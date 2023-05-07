@@ -27,10 +27,10 @@ export default function ProductPage() {
 
 			<Sizes />
 
-			<button className="cart-button">Add to Cart</button>
-			<button className="paypal-button">Buy with Paypal</button>
+			<button className="cart-button">ADD TO CART</button>
+			<button className="paypal-button">BUY WITH PAYPAL</button>
 
-			<div className="product-deets-header">Product Details</div>
+			<div className="product-deets-header">Product</div>
 
 			<div className="product-deets">{product.productDetails}</div>
 

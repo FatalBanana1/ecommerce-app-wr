@@ -3,12 +3,25 @@
 	font-size: 20px;
 }
 
-.product-deets-header {
+.product-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0px 10px;
 }
 
 .product-deets {
 	text-align: left;
-	/* display: none; */
+	margin: 0px 10px;
+}
+
+.cart-button {
+	width: 80%;
+	height: 30px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+	border-radius: 4px;
 }
 
 /* .minus-button,
