@@ -83,6 +83,8 @@ export default function () {
 					</div>
 				))}
 			</div>
+
+			<div className="find-more-options">{`Find More >>>`}</div>
 		</div>
 	);
 }

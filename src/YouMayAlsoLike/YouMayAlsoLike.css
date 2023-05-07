@@ -13,7 +13,7 @@
 
 #options-image {
 	height: 150px;
-	width: 110px;
+	width: 100px;
 	object-fit: cover;
 }
 
@@ -24,7 +24,12 @@
 }
 
 .product-option {
-	width: 30%;
+	width: 26%;
+	padding: 5px 10px;
+}
+.product-option:hover {
+	box-shadow: 0px 0px 5px 1px rgba(128, 128, 128, 0.3);
+	border-radius: 5px;
 }
 
 .option-title {
@@ -40,4 +45,9 @@
 .options {
 	background-color: #e5e7eb;
 	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
+.find-more-options {
+	margin-top: 20px;
 }

@@ -92,9 +92,10 @@
 
 .material-header,
 .model-header {
-	margin-top: 10px;
+	margin-top: 25px;
 	text-align: left;
 	margin-left: 15px;
+	font-weight: 600;
 }
 
 .model-info,
