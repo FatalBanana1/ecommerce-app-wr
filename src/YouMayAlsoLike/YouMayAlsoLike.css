@@ -3,3 +3,41 @@
 	font-weight: 600;
 	text-align: left;
 }
+
+.product-options-image {
+	height: 50px;
+	width: 50px;
+	object-fit: cover;
+	border: 10px solid red;
+}
+
+#options-image {
+	height: 150px;
+	width: 110px;
+	object-fit: cover;
+}
+
+.product-options-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.product-option {
+	width: 30%;
+}
+
+.option-title {
+	font-size: 13px;
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+.options-price {
+	margin-top: 5px;
+}
+
+.options {
+	background-color: #e5e7eb;
+	padding-top: 10px;
+}
