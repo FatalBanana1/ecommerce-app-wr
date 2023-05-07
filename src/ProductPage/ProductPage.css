@@ -12,7 +12,7 @@
 
 .product-deets {
 	text-align: left;
-	margin: 0px 10px;
+	margin: 0px 25px;
 }
 
 .cart-button {
@@ -103,6 +103,10 @@
 	margin-left: 30px;
 	margin-right: 25px;
 	margin-top: 5px;
+}
+
+.back-header {
+	margin: 50px 0px;
 }
 
 /* .minus-button,

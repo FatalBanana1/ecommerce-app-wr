@@ -5,6 +5,7 @@ import Sizes from "../Sizes";
 import "./ProductPage.css";
 import product from "../Data/data.js";
 import Reviews from "../Reviews";
+import YouMayAlsoLike from "../YouMayAlsoLike";
 
 //main
 export default function ProductPage() {
@@ -64,12 +65,10 @@ export default function ProductPage() {
 				)}
 			</div>
 
+			<div className="product-deets">{product.productDetails}</div>
+
 			{!hideDetails && (
 				<>
-					<div className="product-deets">
-						{product.productDetails}
-					</div>
-
 					<div className="model-header">Model</div>
 					<div className="model-info">{product.modelInfo}</div>
 
@@ -131,13 +130,9 @@ export default function ProductPage() {
 
 			<Reviews />
 
-			<div>YOU MAY ALSO LIKE...</div>
-			<div></div>
-			<div></div>
+			<YouMayAlsoLike />
 
-			<div>{"You may like... >"}</div>
-
-			<div>Back to Top</div>
+			<div className="back-header">Back to Top</div>
 		</div>
 	);
 }
