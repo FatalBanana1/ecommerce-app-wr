@@ -19,6 +19,22 @@ export default function Sizes() {
 
 	const [modal, setModal] = useState(false);
 
+	// convert size to chart values
+	function sizingChart(size) {
+		let chart = {
+			XS: [`XS`, `0-2`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			S: [`S`, `4-6`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			M: [`M`, `8-10`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			L: [`L`, `12-14`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			XL: [`XL`, `14-16`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			"1X": [`1X`, `16-18`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			"2X": [`2X`, `18-20`, `33.5"`, `25.5"`, `36.5"`, `32`],
+			"3X": [`3X`, `20-22`, `33.5"`, `25.5"`, `36.5"`, `32`],
+		};
+		// return
+		return chart[size];
+	}
+
 	// ---------------------
 
 	//return
@@ -104,8 +120,30 @@ export default function Sizes() {
 			</div>
 
 			{selectedSize ? (
-				<div className="selected-size">
-					Selected Size: {selectedSize}
+				<div className="sizing-container">
+					<div className="selected-size">
+						<div className="sizes">
+							{`Size: ${sizingChart(selectedSize)[0]}`}
+						</div>
+						<div className="sizes">
+							{`US: ${sizingChart(selectedSize)[1]}`}
+						</div>
+						<div className="sizes">
+							{`Bust: ${sizingChart(selectedSize)[2]}`}
+						</div>
+					</div>
+
+					<div className="selected-size">
+						<div className="sizes">
+							{`Waist: ${sizingChart(selectedSize)[3]}`}
+						</div>
+						<div className="sizes">
+							{`Hip: ${sizingChart(selectedSize)[4]}`}
+						</div>
+						<div className="sizes">
+							{`Inseam: ${sizingChart(selectedSize)[5]}`}
+						</div>
+					</div>
 				</div>
 			) : (
 				<div className="selected-size">Select Size Above</div>
